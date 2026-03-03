@@ -60,30 +60,6 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className="mt-16 md:mt-auto pt-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 border-t border-stone-200 dark:border-white/10 transition-colors">
-                        <div className="flex flex-col gap-1">
-                            <h3 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">NuiM</h3>
-                            <p className="text-sm text-slate-500 dark:text-muted-foreground transition-colors">© {new Date().getFullYear()} NuiM. All rights reserved.</p>
-                        </div>
-                        <div className="flex items-center gap-6">
-                            <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
-                                <span className="sr-only">Twitter</span>
-                                <Twitter className="h-6 w-6" />
-                            </Link>
-                            <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
-                                <span className="sr-only">LinkedIn</span>
-                                <Linkedin className="h-6 w-6" />
-                            </Link>
-                            <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
-                                <span className="sr-only">Dribbble</span>
-                                <Dribbble className="h-6 w-6" />
-                            </Link>
-                            <Link href="https://instagram.com/nil_m1" target="_blank" className="text-muted-foreground transition-colors hover:text-white">
-                                <span className="sr-only">Instagram</span>
-                                <Instagram className="h-6 w-6" />
-                            </Link>
-                        </div>
-                    </div>
                 </div>
 
                 {/* Right Column: The Terminal Grid Form */}
@@ -218,6 +194,32 @@ export default function Footer() {
                     </div>
                 </div>
 
+            </div>
+
+            {/* Bottom Footer Section: Copyright & Socials */}
+            <div className="container relative z-10 mx-auto mt-16 md:mt-24 pt-8 md:pt-16 flex flex-col md:flex-row items-center md:items-center justify-between gap-6 border-t border-stone-200 dark:border-white/10 transition-colors">
+                <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
+                    <h3 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">NuiM</h3>
+                    <p className="text-sm text-slate-500 dark:text-muted-foreground transition-colors">© {new Date().getFullYear()} NuiM. All rights reserved.</p>
+                </div>
+                <div className="flex items-center gap-6">
+                    <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
+                        <span className="sr-only">Twitter</span>
+                        <Twitter className="h-6 w-6" />
+                    </Link>
+                    <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
+                        <span className="sr-only">LinkedIn</span>
+                        <Linkedin className="h-6 w-6" />
+                    </Link>
+                    <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
+                        <span className="sr-only">Dribbble</span>
+                        <Dribbble className="h-6 w-6" />
+                    </Link>
+                    <Link href="https://instagram.com/nil_m1" target="_blank" className="text-muted-foreground transition-colors hover:text-white">
+                        <span className="sr-only">Instagram</span>
+                        <Instagram className="h-6 w-6" />
+                    </Link>
+                </div>
             </div>
         </footer>
     );
