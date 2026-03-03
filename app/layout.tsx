@@ -27,7 +27,7 @@ export default function RootLayout({
         <html lang="en" suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-slate-50 text-slate-900 dark:bg-[#020617] dark:text-white font-sans antialiased transition-colors duration-300",
+                    "min-h-screen bg-white dark:bg-[#0a0a0a] text-black dark:text-white font-sans antialiased transition-colors duration-300",
                     GeistSans.variable,
                     GeistMono.variable
                 )}
@@ -35,7 +35,7 @@ export default function RootLayout({
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
-                    enableSystem
+                    enableSystem={false}
                     disableTransitionOnChange
                 >
                     <BlurredBackground />

@@ -66,6 +66,13 @@ export function Lightbox({ isOpen, imageSrc, altText = "Image", onClose }: Light
                     <motion.div
                         className="relative w-full h-full flex items-center justify-center overflow-hidden"
                         onClick={(e) => e.stopPropagation()}
+                        onWheel={(e) => {
+                            e.stopPropagation();
+                            setScale((s) => {
+                                const newScale = s - e.deltaY * 0.005;
+                                return Math.min(Math.max(newScale, 0.5), 4);
+                            });
+                        }}
                     >
                         <motion.div
                             drag

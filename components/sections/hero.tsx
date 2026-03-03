@@ -33,9 +33,9 @@ export function Hero() {
             {/* Layer 1: The Texture - "Blueprint Grid" */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none z-0" />
 
-            {/* Live Clock Centered */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center pointer-events-none z-0">
-                <div className="text-[15vw] md:text-[10rem] font-bold text-slate-900/5 dark:text-white/5 tracking-tighter mix-blend-overlay">
+            {/* Live Clock Centered at Bottom (Pill) */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center pointer-events-none z-20 bg-white/50 dark:bg-white/5 backdrop-blur-lg border border-black/10 dark:border-white/10 rounded-full px-4 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-colors">
+                <div className="text-sm font-mono tracking-widest text-slate-900 dark:text-white transition-colors">
                     <LiveClock />
                 </div>
             </div>
