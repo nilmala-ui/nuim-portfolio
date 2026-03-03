@@ -42,10 +42,10 @@ export default function Footer() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-square bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-100 via-violet-100 dark:from-blue-600/40 dark:via-violet-900/20 to-transparent blur-3xl rounded-full transform-gpu translate-z-0 will-change-transform" />
             </div>
 
-            <div className="container relative z-10 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+            <div className="container relative z-10 mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-12 lg:gap-x-24">
 
-                {/* Left Column: The Hook */}
-                <div className="flex flex-col justify-between h-full">
+                {/* Left Column: The Hook (Block 1) */}
+                <div className="order-1 md:col-start-1 md:row-start-1 flex flex-col justify-between h-full">
                     <div>
                         <div className="mb-8 inline-flex items-center gap-3 rounded-full border border-stone-200 dark:border-white/10 bg-white dark:bg-white/5 px-4 py-2 backdrop-blur-md shadow-sm dark:shadow-none hover:border-blue-500/50 transition-colors">
                             <span className="relative flex h-3 w-3">
@@ -62,8 +62,8 @@ export default function Footer() {
 
                 </div>
 
-                {/* Right Column: The Terminal Grid Form */}
-                <div className="flex flex-col justify-center">
+                {/* Right Column: The Terminal Grid Form (Block 2) */}
+                <div className="order-2 md:col-start-2 md:row-span-2 flex flex-col justify-center">
                     <div className="relative w-full max-w-lg mx-auto lg:ml-auto lg:mr-0 p-8 md:p-12 rounded-3xl bg-white dark:bg-white/5 backdrop-blur-md border shadow-2xl overflow-hidden transition-colors duration-500 border-stone-200 dark:border-white/10 focus-within:border-blue-500/50 transform-gpu translate-z-0 will-change-transform shadow-[0_8px_32px_rgba(0,0,0,0.05)] dark:shadow-2xl">
 
                         {/* Inner form glass reflection */}
@@ -194,32 +194,32 @@ export default function Footer() {
                     </div>
                 </div>
 
-            </div>
+                {/* Bottom Footer Section: Copyright & Socials (Block 3) */}
+                <div className="order-3 md:col-start-1 md:row-start-2 self-end pt-8 md:pt-16 flex flex-col md:flex-row items-center md:items-start justify-between gap-6 border-t border-stone-200 dark:border-white/10 transition-colors mt-8 md:mt-0">
+                    <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
+                        <h3 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">NuiM</h3>
+                        <p className="text-sm text-slate-500 dark:text-muted-foreground transition-colors">© {new Date().getFullYear()} NuiM. All rights reserved.</p>
+                    </div>
+                    <div className="flex items-center gap-6">
+                        <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
+                            <span className="sr-only">Twitter</span>
+                            <Twitter className="h-6 w-6" />
+                        </Link>
+                        <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
+                            <span className="sr-only">LinkedIn</span>
+                            <Linkedin className="h-6 w-6" />
+                        </Link>
+                        <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
+                            <span className="sr-only">Dribbble</span>
+                            <Dribbble className="h-6 w-6" />
+                        </Link>
+                        <Link href="https://instagram.com/nil_m1" target="_blank" className="text-muted-foreground transition-colors hover:text-white">
+                            <span className="sr-only">Instagram</span>
+                            <Instagram className="h-6 w-6" />
+                        </Link>
+                    </div>
+                </div>
 
-            {/* Bottom Footer Section: Copyright & Socials */}
-            <div className="container relative z-10 mx-auto mt-16 md:mt-24 pt-8 md:pt-16 flex flex-col md:flex-row items-center md:items-center justify-between gap-6 border-t border-stone-200 dark:border-white/10 transition-colors">
-                <div className="flex flex-col gap-1 items-center md:items-start text-center md:text-left">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-white transition-colors">NuiM</h3>
-                    <p className="text-sm text-slate-500 dark:text-muted-foreground transition-colors">© {new Date().getFullYear()} NuiM. All rights reserved.</p>
-                </div>
-                <div className="flex items-center gap-6">
-                    <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
-                        <span className="sr-only">Twitter</span>
-                        <Twitter className="h-6 w-6" />
-                    </Link>
-                    <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
-                        <span className="sr-only">LinkedIn</span>
-                        <Linkedin className="h-6 w-6" />
-                    </Link>
-                    <Link href="#" className="text-muted-foreground transition-colors hover:text-white">
-                        <span className="sr-only">Dribbble</span>
-                        <Dribbble className="h-6 w-6" />
-                    </Link>
-                    <Link href="https://instagram.com/nil_m1" target="_blank" className="text-muted-foreground transition-colors hover:text-white">
-                        <span className="sr-only">Instagram</span>
-                        <Instagram className="h-6 w-6" />
-                    </Link>
-                </div>
             </div>
         </footer>
     );
