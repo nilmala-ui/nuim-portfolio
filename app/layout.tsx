@@ -16,7 +16,6 @@ import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { ScrollRestoration } from "@/components/ui/scroll-restoration";
 
 import { BlurredBackground } from "@/components/ui/blurred-background";
-import { ThemeProvider } from "@/components/theme-provider";
 
 export default function RootLayout({
     children,
@@ -24,27 +23,20 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" className="dark" suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-white dark:bg-[#0a0a0a] text-black dark:text-white font-sans antialiased transition-colors duration-300",
+                    "min-h-screen bg-[#0a0a0a] text-white font-sans antialiased",
                     GeistSans.variable,
                     GeistMono.variable
                 )}
             >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="dark"
-                    enableSystem={false}
-                    disableTransitionOnChange
-                >
-                    <BlurredBackground />
-                    <GrainOverlay />
-                    <Preloader />
-                    <SpotlightCursor />
-                    <ScrollRestoration />
-                    {children}
-                </ThemeProvider>
+                <BlurredBackground />
+                <GrainOverlay />
+                <Preloader />
+                <SpotlightCursor />
+                <ScrollRestoration />
+                {children}
             </body>
         </html>
     );

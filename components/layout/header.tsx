@@ -6,7 +6,6 @@ import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLenis } from "lenis/react";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const NAV_LINKS = [
     { name: "About", href: "/#about" },
@@ -119,9 +118,6 @@ export function Header() {
                             </Link>
                         </div>
                     ))}
-                    <div className="pl-2 border-l border-white/10 dark:border-white/20 ml-1">
-                        <ThemeToggle />
-                    </div>
                 </nav>
             </motion.div>
         </motion.header>

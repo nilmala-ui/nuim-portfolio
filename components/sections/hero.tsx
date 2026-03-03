@@ -119,31 +119,10 @@ export function Hero() {
                 </MagneticButton>
             </motion.div>
 
-            {/* Consolidated Status Bubble */}
-            <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center gap-3 px-4 py-2 rounded-full bg-white dark:bg-[#0a0a0a] border border-stone-200 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transform-gpu translate-z-0 will-change-transform transition-colors pointer-events-none w-max"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.8 }}
-            >
-                <div className="flex items-center gap-2">
-                    <span className="relative flex h-2 w-2">
-                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-                        <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
-                    </span>
-                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-stone-800 dark:text-stone-200 transition-colors">
-                        AVAILABILITY: OPEN
-                    </span>
-                </div>
-
-                <div className="h-4 w-[1px] bg-stone-200 dark:bg-white/10 transition-colors" />
-
-                <div className="flex items-center">
-                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-stone-800 dark:text-stone-200 transition-colors">
-                        <LiveClock />
-                    </span>
-                </div>
-            </motion.div>
+            {/* Premium Typography Clock */}
+            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 pointer-events-none">
+                <LiveClock />
+            </div>
         </section>
     );
 }
