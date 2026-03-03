@@ -40,7 +40,7 @@ export function Hero() {
             {BADGES.map((badge, i) => (
                 <motion.div
                     key={i}
-                    className="hidden md:absolute md:flex items-center justify-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-sm border border-white/10 z-10"
+                    className="hidden md:absolute md:flex items-center justify-center px-4 py-2 rounded-full bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 z-10 transition-colors"
                     style={{
                         top: badge.top,
                         left: badge.left,
@@ -55,7 +55,7 @@ export function Hero() {
                         delay: badge.delay,
                     }}
                 >
-                    <span className="text-[10px] sm:text-xs font-mono tracking-widest text-white/60">
+                    <span className="text-[10px] sm:text-xs font-mono tracking-widest text-slate-600 dark:text-white/60 transition-colors">
                         {badge.text}
                     </span>
                 </motion.div>
@@ -73,7 +73,7 @@ export function Hero() {
                         <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#3B82F6] to-[#7C3AED]">
                             N
                         </span>
-                        <span className="text-white">
+                        <span className="text-slate-900 dark:text-white transition-colors">
                             uiM
                         </span>
                     </span>
@@ -82,11 +82,11 @@ export function Hero() {
                 <div className="max-w-2xl mx-auto space-y-4">
                     <TextReveal
                         text="Forging Digital Identities."
-                        className="text-2xl font-light text-muted-foreground md:text-3xl justify-center"
+                        className="text-2xl font-light text-slate-700 dark:text-muted-foreground md:text-3xl justify-center transition-colors"
                     />
                     <TextReveal
                         text="Specialized in High-End UI & Visual Systems."
-                        className="text-lg text-white/50 justify-center"
+                        className="text-lg text-slate-500 dark:text-white/50 justify-center transition-colors"
                         delay={0.5}
                     />
                 </div>
@@ -119,7 +119,7 @@ export function Hero() {
 
             {/* Status Dock Anchor */}
             <motion.div
-                className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transform-gpu translate-z-0 will-change-transform"
+                className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4 px-6 py-3 rounded-full bg-white/50 dark:bg-white/5 backdrop-blur-lg border border-black/10 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transform-gpu translate-z-0 will-change-transform transition-colors"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
@@ -129,18 +129,18 @@ export function Hero() {
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                         <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
                     </span>
-                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-white/80">
+                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-slate-600 dark:text-white/80 transition-colors">
                         AVAILABILITY: OPEN
                     </span>
                 </div>
 
-                <div className="h-4 w-[1px] bg-white/10" />
+                <div className="h-4 w-[1px] bg-black/10 dark:bg-white/10 transition-colors" />
 
                 <div className="flex items-center gap-2">
                     <span className="text-[10px] md:text-xs font-mono tracking-widest text-[#3B82F6]">
                         [ LIVE TIME ]
                     </span>
-                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-white/80 w-[60px] text-right">
+                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-slate-600 dark:text-white/80 w-[60px] text-right transition-colors">
                         <LiveClock />
                     </span>
                 </div>

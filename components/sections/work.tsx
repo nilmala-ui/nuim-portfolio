@@ -14,7 +14,7 @@ export default function Work() {
 
             <div className="container mx-auto px-6">
                 <motion.h2
-                    className="mb-12 text-3xl font-bold md:text-5xl"
+                    className="mb-12 text-3xl font-bold md:text-5xl text-slate-900 dark:text-white transition-colors"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "0px" }}

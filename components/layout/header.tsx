@@ -6,6 +6,7 @@ import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useLenis } from "lenis/react";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const NAV_LINKS = [
     { name: "About", href: "/#about" },
@@ -65,12 +66,12 @@ export function Header() {
             <motion.div
                 className={cn(
                     "pointer-events-auto flex items-center justify-between rounded-full border transition-all duration-500",
-                    "bg-black/20 backdrop-blur-xl shadow-2xl relative overflow-hidden transform-gpu translate-z-0 will-change-transform",
+                    "bg-white/70 dark:bg-black/20 backdrop-blur-xl shadow-2xl relative overflow-hidden transform-gpu translate-z-0 will-change-transform",
                     // The inner highlight to give it that physical "glass" feel
-                    "shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]",
+                    "shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]",
                     scrolled
-                        ? "mt-4 px-4 py-2 md:px-6 w-[calc(100%-2rem)] md:w-[600px] border-white/20"
-                        : "mt-4 md:mt-6 px-6 py-2.5 md:px-8 md:py-3 w-[calc(100%-2rem)] md:w-[700px] border-blue-500/30"
+                        ? "mt-4 px-4 py-2 md:px-6 w-[calc(100%-2rem)] md:w-[600px] border-black/10 dark:border-white/20"
+                        : "mt-4 md:mt-6 px-6 py-2.5 md:px-8 md:py-3 w-[calc(100%-2rem)] md:w-[700px] border-blue-500/20 dark:border-blue-500/30"
                 )}
             >
                 {/* Faceted Logo Border Effect (visible always, but more intense when scrolled) */}
@@ -82,7 +83,7 @@ export function Header() {
                         <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#3B82F6] to-[#7C3AED]">
                             N
                         </span>
-                        <span className="text-white">
+                        <span className="text-slate-900 dark:text-white transition-colors duration-300">
                             uiM
                         </span>
                     </span>
@@ -100,7 +101,7 @@ export function Header() {
                             <Link
                                 href={link.href}
                                 onClick={(e) => handleScroll(e, link.href)}
-                                className="relative px-3 py-1.5 text-sm font-medium text-white transition-colors"
+                                className="relative px-3 py-1.5 text-sm font-medium text-slate-700 dark:text-white transition-colors hover:text-slate-900 dark:hover:text-white"
                             >
                                 <span className="relative z-10">{link.name}</span>
 
@@ -118,6 +119,9 @@ export function Header() {
                             </Link>
                         </div>
                     ))}
+                    <div className="pl-2 border-l border-white/10 dark:border-white/20 ml-1">
+                        <ThemeToggle />
+                    </div>
                 </nav>
             </motion.div>
         </motion.header>

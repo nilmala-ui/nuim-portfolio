@@ -30,7 +30,7 @@ export default function Services() {
         <section id="services" className="py-12 md:py-16 relative z-10 w-full overflow-hidden scroll-mt-24">
             <div className="container mx-auto px-6">
                 <motion.h2
-                    className="mb-20 text-4xl font-bold md:text-6xl text-center"
+                    className="mb-20 text-4xl font-bold md:text-6xl text-center text-slate-900 dark:text-white transition-colors"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "0px" }}

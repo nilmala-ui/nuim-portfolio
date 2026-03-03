@@ -13,7 +13,7 @@ const DynamicFooter = dynamic(() => import("@/components/layout/footer"));
 export default function Home() {
     return (
         <>
-            <main className="bg-[#020617] w-full">
+            <main className="bg-slate-50 dark:bg-[#020617] w-full transition-colors duration-300">
                 <Header />
                 <Hero />
                 <SectionSeparator />
