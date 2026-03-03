@@ -38,7 +38,7 @@ export function ProjectGallery({ images, title }: ProjectGalleryProps) {
                                     key={originalIndex}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true, margin: "-50px" }}
+                                    viewport={{ once: true, margin: "0px" }}
                                     transition={{ duration: 0.5, delay: i * 0.1 }}
                                     className="group relative w-full rounded-xl overflow-hidden cursor-zoom-in border border-white/10 bg-white/5"
                                     onClick={() => openLightbox(originalIndex)}

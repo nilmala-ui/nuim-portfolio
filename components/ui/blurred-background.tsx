@@ -15,7 +15,7 @@ export function BlurredBackground() {
         <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none bg-background">
 
             {/* Asset 1: Top Right */}
-            <div className="absolute -top-[20%] -right-[10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] opacity-40 mix-blend-screen blur-[120px] md:blur-[150px] rounded-full translate-z-0 will-change-transform">
+            <div className="absolute -top-[20%] -right-[10%] w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] opacity-40 mix-blend-screen blur-[120px] md:blur-[150px] rounded-full transform-gpu translate-z-0 will-change-transform">
                 <Image
                     src={BACKGROUND_ASSETS[0]}
                     alt="Background Mesh 1"
@@ -27,7 +27,7 @@ export function BlurredBackground() {
             </div>
 
             {/* Asset 2: Bottom Left */}
-            <div className="absolute -bottom-[20%] -left-[10%] w-[90vw] h-[90vw] max-w-[1200px] max-h-[1200px] opacity-30 mix-blend-screen blur-[120px] md:blur-[180px] rounded-full translate-z-0 will-change-transform">
+            <div className="absolute -bottom-[20%] -left-[10%] w-[90vw] h-[90vw] max-w-[1200px] max-h-[1200px] opacity-30 mix-blend-screen blur-[120px] md:blur-[180px] rounded-full transform-gpu translate-z-0 will-change-transform">
                 <Image
                     src={BACKGROUND_ASSETS[1]}
                     alt="Background Mesh 2"
@@ -39,7 +39,7 @@ export function BlurredBackground() {
             </div>
 
             {/* Asset 3: Middle Right (Subtle) */}
-            <div className="absolute top-[40%] -right-[20%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] opacity-20 mix-blend-screen blur-[100px] md:blur-[140px] rounded-full translate-z-0 will-change-transform">
+            <div className="absolute top-[40%] -right-[20%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] opacity-20 mix-blend-screen blur-[100px] md:blur-[140px] rounded-full transform-gpu translate-z-0 will-change-transform">
                 <Image
                     src={BACKGROUND_ASSETS[2]}
                     alt="Background Mesh 3"
@@ -50,7 +50,7 @@ export function BlurredBackground() {
             </div>
 
             {/* Asset 4: Top Left (Subtle High Contrast) */}
-            <div className="absolute top-[10%] -left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] opacity-30 mix-blend-screen blur-[100px] md:blur-[120px] rounded-full translate-z-0 will-change-transform">
+            <div className="absolute top-[10%] -left-[20%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] opacity-30 mix-blend-screen blur-[100px] md:blur-[120px] rounded-full transform-gpu translate-z-0 will-change-transform">
                 <Image
                     src={BACKGROUND_ASSETS[3]}
                     alt="Background Mesh 4"

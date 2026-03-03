@@ -1,10 +1,11 @@
 "use client";
 
 
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { LiveClock } from "@/components/ui/live-clock";
+import { AmbientMesh } from "@/components/ui/ambient-mesh";
 import { useLenis } from "lenis/react";
 
 const BADGES = [
@@ -15,23 +16,6 @@ const BADGES = [
 
 export function Hero() {
     const lenis = useLenis();
-
-    // Mouse position for Fluid Ambient Mesh
-    const mouseX = useMotionValue(0);
-    const mouseY = useMotionValue(0);
-
-    // Smooth physics for the mouse follow
-    const springX = useSpring(mouseX, { stiffness: 50, damping: 20 });
-    const springY = useSpring(mouseY, { stiffness: 50, damping: 20 });
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-        // Calculate offset from center of screen
-        const rect = e.currentTarget.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        mouseX.set(e.clientX - centerX);
-        mouseY.set(e.clientY - centerY);
-    };
 
 
     const scrollToStrategy = (hash: string) => {
@@ -45,20 +29,12 @@ export function Hero() {
     return (
         <section
             className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden px-6 text-center"
-            onMouseMove={handleMouseMove}
         >
             {/* Layer 1: The Texture - "Blueprint Grid" */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none z-0" />
 
             {/* Layer 2: The Light - "Fluid Ambient Mesh" */}
-            <motion.div
-                className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -mt-[400px] -ml-[400px] rounded-full pointer-events-none z-0 mix-blend-screen blur-[150px] transform-gpu translate-z-0 will-change-transform"
-                style={{
-                    background: "radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(124,58,237,0.2) 100%)",
-                    x: springX,
-                    y: springY,
-                }}
-            />
+            <AmbientMesh />
 
             {/* Layer 3: Contextual Details - Floating Badges */}
             {BADGES.map((badge, i) => (
@@ -134,7 +110,7 @@ export function Hero() {
 
                 {/* Secondary CTA */}
                 <MagneticButton
-                    className="group flex h-14 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-8 text-white transition-all hover:bg-white/10 hover:border-white/40"
+                    className="group flex h-14 items-center justify-center rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-8 text-white transition-all hover:bg-white/10 hover:border-white/40 transform-gpu translate-z-0 will-change-transform"
                     onClick={() => scrollToStrategy('#contact')}
                 >
                     <span className="font-medium tracking-wide">Start a Project</span>
@@ -143,7 +119,7 @@ export function Hero() {
 
             {/* Status Dock Anchor */}
             <motion.div
-                className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+                className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4 px-6 py-3 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transform-gpu translate-z-0 will-change-transform"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}

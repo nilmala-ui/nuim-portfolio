@@ -33,7 +33,7 @@ export default function Services() {
                     className="mb-20 text-4xl font-bold md:text-6xl text-center"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ once: true, margin: "0px" }}
                     transition={{ duration: 0.6 }}
                 >
                     Core Capabilities
@@ -45,7 +45,7 @@ export default function Services() {
                             className="group relative h-[500px] w-full rounded-[2rem] bg-black/40 backdrop-blur-2xl p-px overflow-hidden shadow-2xl"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
+                            viewport={{ once: true, margin: "0px" }}
                             transition={{ duration: 0.6, delay: index * 0.15 }}
                         >
 
@@ -79,7 +79,7 @@ export default function Services() {
                                 </div>
 
                                 {/* Ambient Background Glow inside card */}
-                                <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-600/20 blur-[80px] rounded-full group-hover:bg-violet-600/30 transition-colors duration-700 pointer-events-none" />
+                                <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-600/20 blur-[80px] rounded-full group-hover:bg-violet-600/30 transition-colors duration-700 pointer-events-none transform-gpu translate-z-0 will-change-transform" />
                             </div>
                         </motion.div>
                     ))}

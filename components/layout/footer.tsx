@@ -39,7 +39,7 @@ export default function Footer() {
         <footer id="contact" className="relative bg-black py-16 px-6 overflow-hidden scroll-mt-24">
             {/* Spotlight Background */}
             <div className="pointer-events-none absolute inset-0 right-0 left-auto w-1/2 h-full z-0 opacity-40">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-600/40 via-violet-900/20 to-transparent blur-3xl rounded-full" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-600/40 via-violet-900/20 to-transparent blur-3xl rounded-full transform-gpu translate-z-0 will-change-transform" />
             </div>
 
             <div className="container relative z-10 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
@@ -88,7 +88,7 @@ export default function Footer() {
 
                 {/* Right Column: The Terminal Grid Form */}
                 <div className="flex flex-col justify-center">
-                    <div className="relative w-full max-w-lg mx-auto lg:ml-auto lg:mr-0 p-8 md:p-12 rounded-3xl bg-white/5 backdrop-blur-md border shadow-2xl overflow-hidden transition-colors duration-500 border-white/10 focus-within:border-blue-500/50">
+                    <div className="relative w-full max-w-lg mx-auto lg:ml-auto lg:mr-0 p-8 md:p-12 rounded-3xl bg-white/5 backdrop-blur-md border shadow-2xl overflow-hidden transition-colors duration-500 border-white/10 focus-within:border-blue-500/50 transform-gpu translate-z-0 will-change-transform">
 
                         {/* Inner form glass reflection */}
                         <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 pointer-events-none rounded-3xl" />

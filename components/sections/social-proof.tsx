@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function SocialProof() {
     return (
-        <section className="relative z-10 w-full border-y border-white/5 bg-white/[0.02] py-8 overflow-hidden backdrop-blur-md">
+        <section className="relative z-10 w-full border-y border-white/5 bg-white/[0.02] py-8 overflow-hidden backdrop-blur-md transform-gpu translate-z-0 will-change-transform">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-16">
                     <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/40 whitespace-nowrap text-center md:text-left">

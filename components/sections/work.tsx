@@ -10,14 +10,14 @@ export default function Work() {
     return (
         <section id="work" className="py-12 md:py-16 relative z-10 w-full overflow-hidden scroll-mt-24">
             {/* Creative Filler: Deep Violet & Electric Azure background blur to tie sections together */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] max-w-[1200px] max-h-[1200px] bg-gradient-to-l from-blue-600/10 to-violet-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] max-w-[1200px] max-h-[1200px] bg-gradient-to-l from-blue-600/10 to-violet-600/10 blur-[150px] rounded-full pointer-events-none -z-10 transform-gpu translate-z-0 will-change-transform" />
 
             <div className="container mx-auto px-6">
                 <motion.h2
                     className="mb-12 text-3xl font-bold md:text-5xl"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ once: true, margin: "0px" }}
                     transition={{ duration: 0.6 }}
                 >
                     Selected Work
@@ -37,7 +37,7 @@ export default function Work() {
                                 className={`relative h-full w-full ${spanClass}`}
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
+                                viewport={{ once: true, margin: "0px" }}
                                 transition={{ duration: 0.6, delay: index * 0.15 }}
                             >
                                 <Link href={`/work/${project.slug}`} className="block h-full w-full">
@@ -62,7 +62,7 @@ export default function Work() {
 
                                         {/* Frosted Glass Info Banner (Slides up on hover) */}
                                         <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                                            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl">
+                                            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl transform-gpu translate-z-0 will-change-transform">
                                                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight">
                                                     {project.title}
                                                 </h3>

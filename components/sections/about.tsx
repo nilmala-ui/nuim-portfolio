@@ -12,7 +12,7 @@ export default function About() {
                     className="mb-12 text-3xl font-bold md:text-5xl text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.5)]"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
+                    viewport={{ once: true, margin: "0px" }}
                     transition={{ duration: 0.6 }}
                 >
                     Nil Mala
@@ -26,10 +26,10 @@ export default function About() {
                         className="md:col-span-2 group"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "0px" }}
                         transition={{ duration: 0.6 }}
                     >
-                        <div className="h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/50 hover:bg-white/10 flex flex-col justify-center">
+                        <div className="h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 md:p-12 transition-all duration-300 hover:scale-[1.02] hover:border-blue-500/50 hover:bg-white/10 flex flex-col justify-center transform-gpu translate-z-0 will-change-transform">
                             <h3 className="text-2xl font-bold mb-6 text-white/50 uppercase tracking-wider text-sm">Profile</h3>
                             <div className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight space-y-6 text-white">
                                 <p>
@@ -47,10 +47,10 @@ export default function About() {
                         className="md:col-span-1 group h-[400px]"
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-50px" }}
+                        viewport={{ once: true, margin: "0px" }}
                         transition={{ duration: 0.6, delay: 0.15 }}
                     >
-                        <div className="relative h-full w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden shadow-[inset_0_0_80px_rgba(59,130,246,0.1)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[inset_0_0_100px_rgba(124,58,237,0.3)] hover:border-violet-500/50">
+                        <div className="relative h-full w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden shadow-[inset_0_0_80px_rgba(59,130,246,0.1)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[inset_0_0_100px_rgba(124,58,237,0.3)] hover:border-violet-500/50 transform-gpu translate-z-0 will-change-transform">
                             {/* Inner NuiM Glow */}
                             <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-violet-600/10 z-10 pointer-events-none" />
                             <Image
