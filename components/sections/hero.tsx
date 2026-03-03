@@ -5,7 +5,7 @@ import { motion, useMotionValue, useSpring } from "framer-motion";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { TextReveal } from "@/components/ui/text-reveal";
 import { LiveClock } from "@/components/ui/live-clock";
-import { useLenis } from "@studio-freight/react-lenis";
+import { useLenis } from "lenis/react";
 
 const BADGES = [
     { text: "UI & DIGITAL DESIGN", top: "20%", left: "15%", delay: 0 },
