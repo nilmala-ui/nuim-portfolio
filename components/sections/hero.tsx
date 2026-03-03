@@ -33,12 +33,7 @@ export function Hero() {
             {/* Layer 1: The Texture - "Blueprint Grid" */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none z-0" />
 
-            {/* Live Clock Centered at Bottom (Pill) */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center justify-center pointer-events-none z-20 bg-white/50 dark:bg-white/5 backdrop-blur-lg border border-black/10 dark:border-white/10 rounded-full px-4 py-2 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-colors">
-                <div className="text-sm font-mono tracking-widest text-slate-900 dark:text-white transition-colors">
-                    <LiveClock />
-                </div>
-            </div>
+
 
             {/* Layer 2: The Light - "Fluid Ambient Mesh" */}
             <AmbientMesh />
@@ -124,9 +119,9 @@ export function Hero() {
                 </MagneticButton>
             </motion.div>
 
-            {/* Status Dock Anchor */}
+            {/* Consolidated Status Bubble */}
             <motion.div
-                className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex items-center gap-4 px-6 py-3 rounded-full bg-white/50 dark:bg-white/5 backdrop-blur-lg border border-black/10 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transform-gpu translate-z-0 will-change-transform transition-colors"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center gap-3 px-4 py-2 rounded-full bg-white dark:bg-[#0a0a0a] border border-stone-200 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(0,0,0,0.4)] transform-gpu translate-z-0 will-change-transform transition-colors pointer-events-none w-max"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1, duration: 0.8 }}
@@ -136,12 +131,18 @@ export function Hero() {
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
                         <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
                     </span>
-                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-slate-600 dark:text-white/80 transition-colors">
+                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-stone-800 dark:text-stone-200 transition-colors">
                         AVAILABILITY: OPEN
                     </span>
                 </div>
 
+                <div className="h-4 w-[1px] bg-stone-200 dark:bg-white/10 transition-colors" />
 
+                <div className="flex items-center">
+                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-stone-800 dark:text-stone-200 transition-colors">
+                        <LiveClock />
+                    </span>
+                </div>
             </motion.div>
         </section>
     );
