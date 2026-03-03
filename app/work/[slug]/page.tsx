@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import Footer from "@/components/layout/footer";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { ProjectGallery } from "@/components/work/project-gallery";
 
