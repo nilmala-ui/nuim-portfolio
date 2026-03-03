@@ -70,8 +70,8 @@ export function Header() {
                     // The inner highlight to give it that physical "glass" feel
                     "shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]",
                     scrolled
-                        ? "mt-4 px-4 py-2 md:px-6 w-[calc(100%-2rem)] md:w-[600px] border-black/10 dark:border-white/20"
-                        : "mt-4 md:mt-6 px-6 py-2.5 md:px-8 md:py-3 w-[calc(100%-2rem)] md:w-[700px] border-blue-500/20 dark:border-blue-500/30"
+                        ? "mt-4 px-4 py-2 md:px-6 w-[calc(100%-2rem)] max-w-[600px] mx-auto border-black/10 dark:border-white/20"
+                        : "mt-4 md:mt-6 px-6 py-2.5 md:px-8 md:py-3 w-[calc(100%-2rem)] max-w-[700px] mx-auto border-blue-500/20 dark:border-blue-500/30"
                 )}
             >
                 {/* Faceted Logo Border Effect (visible always, but more intense when scrolled) */}

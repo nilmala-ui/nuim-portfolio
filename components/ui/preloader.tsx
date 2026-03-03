@@ -54,7 +54,7 @@ export function Preloader() {
                             System Initializing...
                         </motion.div>
 
-                        <h1 className="text-8xl font-black tracking-tighter">
+                        <h1 className="text-5xl md:text-8xl font-black tracking-tighter">
                             {counter}%
                         </h1>
 

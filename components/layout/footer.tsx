@@ -39,7 +39,7 @@ export default function Footer() {
         <footer id="contact" className="relative bg-black py-16 px-6 overflow-hidden scroll-mt-24">
             {/* Spotlight Background */}
             <div className="pointer-events-none absolute inset-0 right-0 left-auto w-1/2 h-full z-0 opacity-40">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-600/40 via-violet-900/20 to-transparent blur-3xl rounded-full transform-gpu translate-z-0 will-change-transform" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-square bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-600/40 via-violet-900/20 to-transparent blur-3xl rounded-full transform-gpu translate-z-0 will-change-transform" />
             </div>
 
             <div className="container relative z-10 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">

@@ -33,6 +33,13 @@ export function Hero() {
             {/* Layer 1: The Texture - "Blueprint Grid" */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none z-0" />
 
+            {/* Live Clock Centered */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center pointer-events-none z-0">
+                <div className="text-[15vw] md:text-[10rem] font-bold text-slate-900/5 dark:text-white/5 tracking-tighter mix-blend-overlay">
+                    <LiveClock />
+                </div>
+            </div>
+
             {/* Layer 2: The Light - "Fluid Ambient Mesh" */}
             <AmbientMesh />
 
@@ -68,7 +75,7 @@ export function Hero() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="z-10 relative"
             >
-                <h1 className="mb-6 text-6xl md:text-8xl lg:text-[10rem] leading-none text-white flex items-center justify-center -ml-4">
+                <h1 className="mb-6 text-5xl md:text-8xl lg:text-[10rem] leading-none flex items-center justify-center -ml-4">
                     <span className="font-bold tracking-tighter">
                         <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#3B82F6] to-[#7C3AED]">
                             N
@@ -134,16 +141,7 @@ export function Hero() {
                     </span>
                 </div>
 
-                <div className="h-4 w-[1px] bg-black/10 dark:bg-white/10 transition-colors" />
 
-                <div className="flex items-center gap-2">
-                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-[#3B82F6]">
-                        [ LIVE TIME ]
-                    </span>
-                    <span className="text-[10px] md:text-xs font-mono tracking-widest text-slate-600 dark:text-white/80 w-[60px] text-right transition-colors">
-                        <LiveClock />
-                    </span>
-                </div>
             </motion.div>
         </section>
     );

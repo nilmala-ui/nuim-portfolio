@@ -23,7 +23,7 @@ export function AmbientMesh() {
 
     return (
         <motion.div
-            className="absolute top-1/2 left-1/2 w-[800px] h-[800px] -mt-[400px] -ml-[400px] rounded-full pointer-events-none z-0 mix-blend-screen blur-[150px] transform-gpu translate-z-0 will-change-transform"
+            className="absolute top-1/2 left-1/2 w-full max-w-[800px] aspect-square -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none z-0 mix-blend-screen blur-[150px] transform-gpu translate-z-0 will-change-transform"
             style={{
                 background: "radial-gradient(circle, rgba(59,130,246,0.2) 0%, rgba(124,58,237,0.2) 100%)",
                 x: springX,
