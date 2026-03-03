@@ -56,7 +56,7 @@ export default function Footer() {
                         </div>
                         <h2 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-[1.1]">Ready to start <br /> a new project?</h2>
                         <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                            I'm currently available for freelance work. Drop a message to discuss UI design, branding, or digital art commissions, and I'll get back to you shortly.
+                            I&apos;m currently available for freelance work. Drop a message to discuss UI design, branding, or digital art commissions, and I&apos;ll get back to you shortly.
                         </p>
                     </div>
 
