@@ -10,7 +10,7 @@ export default function Work() {
     return (
         <section id="work" className="py-12 md:py-16 relative z-10 w-full overflow-hidden scroll-mt-24">
             {/* Creative Filler: Deep Violet & Electric Azure background blur to tie sections together */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] max-w-[1200px] max-h-[1200px] bg-gradient-to-l from-blue-600/10 to-violet-600/10 blur-[150px] rounded-full pointer-events-none -z-10 transform-gpu translate-z-0 will-change-transform" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] max-w-[1200px] max-h-[1200px] bg-gradient-to-l from-blue-600/10 to-violet-600/10 blur-[80px] md:blur-[150px] rounded-full pointer-events-none -z-10 transform-gpu translate-z-0 will-change-transform" />
 
             <div className="container mx-auto px-6">
                 <motion.h2
@@ -58,10 +58,10 @@ export default function Work() {
                                         />
 
                                         {/* Hover Overlay Gradient for Readability */}
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-100 md:opacity-50 md:group-hover:opacity-100 transition-opacity duration-500" />
 
-                                        {/* Frosted Glass Info Banner (Slides up on hover) */}
-                                        <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                                        {/* Frosted Glass Info Banner (Always visible on mobile, slides up on hover on desktop) */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-0 opacity-100 md:translate-y-8 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition-all duration-500 ease-out">
                                             <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl transform-gpu translate-z-0 will-change-transform">
                                                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 tracking-tight">
                                                     {project.title}

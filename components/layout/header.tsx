@@ -100,7 +100,7 @@ export function Header() {
                             <Link
                                 href={link.href}
                                 onClick={(e) => handleScroll(e, link.href)}
-                                className="relative px-3 py-1.5 text-sm font-medium text-slate-700 dark:text-white transition-colors hover:text-slate-900 dark:hover:text-white"
+                                className="relative px-3 py-1.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-sm font-medium text-slate-700 dark:text-white transition-colors hover:text-slate-900 dark:hover:text-white"
                             >
                                 <span className="relative z-10">{link.name}</span>
 

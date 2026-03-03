@@ -44,19 +44,19 @@ export function Lightbox({ isOpen, imageSrc, altText = "Image", onClose }: Light
                     <div className="absolute top-4 right-4 flex gap-4 z-50">
                         <button
                             onClick={(e) => { e.stopPropagation(); setScale(s => Math.max(1, s - 0.5)); }}
-                            className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                            className="p-2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
                         >
                             <ZoomOut className="w-6 h-6" />
                         </button>
                         <button
                             onClick={(e) => { e.stopPropagation(); setScale(s => Math.min(4, s + 0.5)); }}
-                            className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                            className="p-2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
                         >
                             <ZoomIn className="w-6 h-6" />
                         </button>
                         <button
                             onClick={onClose}
-                            className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+                            className="p-2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
                         >
                             <X className="w-6 h-6" />
                         </button>
@@ -77,6 +77,12 @@ export function Lightbox({ isOpen, imageSrc, altText = "Image", onClose }: Light
                         <motion.div
                             drag
                             dragConstraints={{ left: -scale * 200, right: scale * 200, top: -scale * 200, bottom: scale * 200 }}
+                            onDragEnd={(e, info) => {
+                                // Swipe to dismiss on mobile
+                                if (scale === 1 && Math.abs(info.offset.y) > 100) {
+                                    onClose();
+                                }
+                            }}
                             animate={{ scale: scale }}
                             className="relative w-full h-full max-w-[90vw] max-h-[90vh]"
                             style={{ cursor: scale > 1 ? "grab" : "default" }}
