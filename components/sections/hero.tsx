@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { TextReveal } from "@/components/ui/text-reveal";
