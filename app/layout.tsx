@@ -17,9 +17,7 @@ import { SpotlightCursor } from "@/components/ui/spotlight-cursor";
 import { Preloader } from "@/components/ui/preloader";
 import { SmoothScroll } from "@/components/ui/smooth-scroll";
 import { ScrollRestoration } from "@/components/ui/scroll-restoration";
-
 import { BlurredBackground } from "@/components/ui/blurred-background";
-import { CustomCursor } from "@/components/ui/custom-cursor";
 
 export default function RootLayout({
     children,
@@ -30,7 +28,7 @@ export default function RootLayout({
         <html lang="en" className="dark" suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-[#0a0a0a] text-white font-sans antialiased md:cursor-none",
+                    "min-h-screen bg-[#0a0a0a] text-white font-sans antialiased",
                     GeistSans.variable,
                     GeistMono.variable,
                     playfair.variable
@@ -39,7 +37,6 @@ export default function RootLayout({
                 <BlurredBackground />
                 <GrainOverlay />
                 <Preloader />
-                <CustomCursor />
                 <SpotlightCursor />
                 <ScrollRestoration />
                 {children}
