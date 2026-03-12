@@ -41,9 +41,9 @@ export function Hero() {
 
             {/* Main Hero Content */}
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
                 className="z-10 relative mt-20 md:mt-0"
             >
                 <h1 className="mb-6 text-6xl md:text-[8rem] lg:text-[10rem] leading-[0.9] font-serif font-bold tracking-tighter text-slate-900 dark:text-white flex flex-row items-baseline">

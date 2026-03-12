@@ -36,10 +36,10 @@ export default function Work() {
                             <motion.div
                                 key={index}
                                 className={`relative w-full ${staggerClass}`}
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "0px" }}
-                                transition={{ duration: 0.8, delay: index * 0.1 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.1 }}
                             >
                                 <Link href={`/work/${project.slug}`} className="block group">
                                     <div className="w-full relative overflow-hidden bg-black/5 dark:bg-white/5">
@@ -49,7 +49,7 @@ export default function Work() {
                                             priority={false}
                                             width={1200}
                                             height={800}
-                                            className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03] translate-z-0"
+                                            className="w-full h-auto object-cover transition-transform duration-[800ms] ease-in-out group-hover:scale-[1.03] translate-z-0"
                                             sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                     </div>
