@@ -1,6 +1,5 @@
 "use client";
 
-
 import { motion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -8,15 +7,8 @@ import { LiveClock } from "@/components/ui/live-clock";
 import { AmbientMesh } from "@/components/ui/ambient-mesh";
 import { useLenis } from "lenis/react";
 
-const BADGES = [
-    { text: "UI & DIGITAL DESIGN", top: "20%", left: "15%", delay: 0 },
-    { text: "VISUAL BRAND SYSTEMS", top: "30%", right: "15%", delay: 2 },
-    { text: "3D ART & MOTION", bottom: "35%", left: "25%", delay: 4 },
-];
-
 export function Hero() {
     const lenis = useLenis();
-
 
     const scrollToStrategy = (hash: string) => {
         if (lenis) {
@@ -28,67 +20,47 @@ export function Hero() {
 
     return (
         <section
-            className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden px-6 text-center"
+            className="relative flex h-screen w-full flex-col justify-center overflow-hidden px-6 md:px-12 lg:px-24 text-left"
         >
             {/* Layer 1: The Texture - "Blueprint Grid" */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)] pointer-events-none z-0" />
 
-
-
             {/* Layer 2: The Light - "Fluid Ambient Mesh" */}
             <AmbientMesh />
 
-            {/* Layer 3: Contextual Details - Floating Badges */}
-            {BADGES.map((badge, i) => (
-                <motion.div
-                    key={i}
-                    className="hidden md:absolute md:flex items-center justify-center px-4 py-2 rounded-full bg-white/50 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 z-10 transition-colors"
-                    style={{
-                        top: badge.top,
-                        left: badge.left,
-                        right: badge.right,
-                        bottom: badge.bottom,
-                    }}
-                    animate={{ y: [10, -10, 10] }}
-                    transition={{
-                        duration: 8,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                        delay: badge.delay,
-                    }}
-                >
-                    <span className="text-[10px] sm:text-xs font-mono tracking-widest text-slate-600 dark:text-white/60 transition-colors">
-                        {badge.text}
-                    </span>
-                </motion.div>
-            ))}
+            {/* Architectural Elements (Metadata) */}
+            <div className="absolute top-10 right-10 text-xs font-sans tracking-widest text-slate-500 dark:text-white/50 z-10 hidden md:block">
+                [ VISUAL SYSTEMS ]
+            </div>
+            <div className="absolute bottom-[30%] left-6 text-xs font-sans tracking-widest text-slate-500 dark:text-white/50 z-10 origin-left -rotate-90 hidden md:block">
+                SYS.01 // OVERHAUL
+            </div>
+            <div className="absolute top-1/2 right-6 text-xs font-sans tracking-widest text-slate-500 dark:text-white/50 z-10 origin-right rotate-90 hidden md:block">
+                [ EST. 2026 ]
+            </div>
 
             {/* Main Hero Content */}
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="z-10 relative"
+                className="z-10 relative mt-20 md:mt-0"
             >
-                <h1 className="mb-6 text-5xl md:text-8xl lg:text-[10rem] leading-none flex items-center justify-center -ml-4">
-                    <span className="font-bold tracking-tighter">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#3B82F6] to-[#7C3AED]">
-                            N
-                        </span>
-                        <span className="text-slate-900 dark:text-white transition-colors">
-                            uiM
-                        </span>
+                <h1 className="mb-6 text-6xl md:text-[8rem] lg:text-[10rem] leading-[0.9] font-serif font-bold tracking-tighter text-slate-900 dark:text-white flex flex-row items-baseline">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-br from-[#3B82F6] to-[#7C3AED]">
+                        N
                     </span>
+                    <span>uiM</span>
                 </h1>
 
-                <div className="max-w-2xl mx-auto space-y-4">
+                <div className="max-w-md space-y-4 font-sans text-left">
                     <TextReveal
                         text="Forging Digital Identities."
-                        className="text-2xl font-light text-slate-700 dark:text-muted-foreground md:text-3xl justify-center transition-colors"
+                        className="text-2xl font-light text-slate-700 dark:text-muted-foreground md:text-3xl transition-colors"
                     />
                     <TextReveal
                         text="Specialized in High-End UI & Visual Systems."
-                        className="text-lg text-slate-500 dark:text-white/50 justify-center transition-colors"
+                        className="text-lg text-slate-500 dark:text-white/50 transition-colors"
                         delay={0.5}
                     />
                 </div>
@@ -99,7 +71,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
-                className="z-10 mt-12 flex flex-col sm:flex-row items-center gap-4 relative"
+                className="z-10 mt-12 flex flex-col sm:flex-row items-start gap-4 relative font-sans"
             >
                 {/* Primary CTA */}
                 <MagneticButton
